@@ -1541,6 +1541,109 @@ body.dark-theme canvas#trendChart,
 body.dark-theme canvas#typePieChart {
     filter: brightness(0.8) contrast(1.2);
 }
+ /* =============================================
+   تنسيق ثابت ومضمون للوحة المعلومات (Dashboard)
+   لا يعتمد على Tailwind أو أي CDN خارجي
+   ============================================= */
+
+/* إعادة تعيين خلفيات البطاقات بشكل قاطع */
+#dashboard-tab .stat-card {
+    background: #ffffff !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025) !important;
+    border-right-width: 4px !important;
+}
+
+/* بطاقة التحصيلات */
+#dashboard-tab .stat-card.border-emerald-500 {
+    border-right-color: #10b981 !important;
+}
+#dashboard-tab .stat-card .text-emerald-700,
+#dashboard-tab .stat-card .text-emerald-800 {
+    color: #065f46 !important;
+}
+
+/* بطاقة الإيداعات */
+#dashboard-tab .stat-card.border-blue-500 {
+    border-right-color: #3b82f6 !important;
+}
+#dashboard-tab .stat-card .text-blue-700,
+#dashboard-tab .stat-card .text-blue-800 {
+    color: #1e40af !important;
+}
+
+/* بطاقة المصروفات */
+#dashboard-tab .stat-card.border-red-500 {
+    border-right-color: #ef4444 !important;
+}
+#dashboard-tab .stat-card .text-red-700,
+#dashboard-tab .stat-card .text-red-800 {
+    color: #991b1b !important;
+}
+
+/* بطاقة صافي الصناديق */
+#dashboard-tab .stat-card.border-purple-500 {
+    border-right-color: #8b5cf6 !important;
+}
+#dashboard-tab .stat-card .text-purple-700,
+#dashboard-tab .stat-card .text-purple-800 {
+    color: #6b21a8 !important;
+}
+
+/* تنسيق الأرقام الكبيرة */
+#dashboard-tab .stat-card .text-3xl,
+#dashboard-tab .stat-card .text-2xl,
+#dashboard-tab .stat-card .text-xl {
+    font-size: 1.875rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+/* النصوص الصغيرة (التصنيفات) */
+#dashboard-tab .stat-card .text-sm {
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    color: #4b5563 !important;
+}
+
+/* النصوص الثانوية (مثل نسبة التغيير) */
+#dashboard-tab .stat-card .text-xs {
+    font-size: 0.75rem !important;
+    color: #6b7280 !important;
+}
+
+/* الوضع المظلم - تنسيق ثابت أيضاً */
+body.dark-theme #dashboard-tab .stat-card {
+    background: #1e293b !important;
+    border-right-color: #475569 !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-emerald-700,
+body.dark-theme #dashboard-tab .stat-card .text-emerald-800 {
+    color: #a7f3d0 !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-blue-700,
+body.dark-theme #dashboard-tab .stat-card .text-blue-800 {
+    color: #93c5fd !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-red-700,
+body.dark-theme #dashboard-tab .stat-card .text-red-800 {
+    color: #fca5a5 !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-purple-700,
+body.dark-theme #dashboard-tab .stat-card .text-purple-800 {
+    color: #d8b4fe !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-sm {
+    color: #cbd5e1 !important;
+}
+
+body.dark-theme #dashboard-tab .stat-card .text-xs {
+    color: #94a3b8 !important;
+}      
 </style>
 </head>
 <body>
