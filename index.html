@@ -1462,30 +1462,31 @@ body.dark-theme .action-btn:hover {
         gap: 1rem !important;
     }
 }
-       /* إصلاح الوضع المظلم لجميع العناصر الناقصة */
-body.dark-theme .stat-card,
-body.dark-theme .glass-card,
-body.dark-theme .card-modern {
-    background-color: #1e293b !important;
-    color: #e2e8f0 !important;
-    border-color: #334155 !important;
+/* تعطيل تأثير الوضع المظلم على تبويبي Dashboard والإعدادات مؤقتًا */
+body.dark-theme #dashboard-tab,
+body.dark-theme #settings-tab {
+    color-scheme: light !important;
 }
 
-body.dark-theme .bg-white,
-body.dark-theme .bg-gray-50,
-body.dark-theme .bg-gray-100 {
-    background-color: #0f172a !important;
+body.dark-theme #dashboard-tab .stat-card,
+body.dark-theme #dashboard-tab .glass-card,
+body.dark-theme #settings-tab .glass-card,
+body.dark-theme #settings-tab .bg-white\/70 {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border-color: #e2e8f0 !important;
 }
 
-body.dark-theme .text-gray-800,
-body.dark-theme .text-gray-700,
-body.dark-theme .text-gray-900 {
-    color: #f8fafc !important;
+body.dark-theme #dashboard-tab .text-gray-800,
+body.dark-theme #dashboard-tab .text-gray-700,
+body.dark-theme #settings-tab .text-gray-800,
+body.dark-theme #settings-tab .text-gray-700 {
+    color: #1e293b !important;
 }
 
-body.dark-theme .border-gray-200,
-body.dark-theme .border-gray-100 {
-    border-color: #334155 !important;
+body.dark-theme #dashboard-tab canvas,
+body.dark-theme #settings-tab canvas {
+    filter: invert(0) !important; /* إعادة الألوان الطبيعية */
 }
 </style>
 </head>
