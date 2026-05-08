@@ -1463,30 +1463,83 @@ body.dark-theme .action-btn:hover {
     }
 }
 /* تعطيل تأثير الوضع المظلم على تبويبي Dashboard والإعدادات مؤقتًا */
-body.dark-theme #dashboard-tab,
-body.dark-theme #settings-tab {
-    color-scheme: light !important;
+/* ==========================================
+   إصلاح شامل للوضع المظلم في Dashboard والإعدادات
+   ========================================== */
+
+/* 1. إصلاح خلفيات البطاقات والتدرجات في Dashboard */
+body.dark-theme #dashboard-tab .stat-card.bg-gradient-to-br {
+    background-image: none !important;
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
 }
 
-body.dark-theme #dashboard-tab .stat-card,
-body.dark-theme #dashboard-tab .glass-card,
-body.dark-theme #settings-tab .glass-card,
-body.dark-theme #settings-tab .bg-white\/70 {
-    background-color: #ffffff !important;
-    color: #1e293b !important;
-    border-color: #e2e8f0 !important;
+body.dark-theme #dashboard-tab .stat-card .text-emerald-800,
+body.dark-theme #dashboard-tab .stat-card .text-blue-800,
+body.dark-theme #dashboard-tab .stat-card .text-red-800,
+body.dark-theme #dashboard-tab .stat-card .text-purple-800 {
+    color: #a7f3d0 !important;
 }
 
+body.dark-theme #dashboard-tab .stat-card .text-emerald-700,
+body.dark-theme #dashboard-tab .stat-card .text-blue-700,
+body.dark-theme #dashboard-tab .stat-card .text-red-700,
+body.dark-theme #dashboard-tab .stat-card .text-purple-700 {
+    color: #86efac !important;
+}
+
+/* 2. إصلاح الخلفيات البيضاء والشفافة */
+body.dark-theme #dashboard-tab .bg-white\/50,
+body.dark-theme #dashboard-tab .bg-white,
+body.dark-theme #dashboard-tab .bg-gray-50,
+body.dark-theme #dashboard-tab .bg-gray-100,
+body.dark-theme #settings-tab .bg-white,
+body.dark-theme #settings-tab .bg-gray-50,
+body.dark-theme #settings-tab .bg-white\/60 {
+    background-color: #0f172a !important;
+}
+
+/* 3. إصلاح النصوص الداكنة */
 body.dark-theme #dashboard-tab .text-gray-800,
 body.dark-theme #dashboard-tab .text-gray-700,
+body.dark-theme #dashboard-tab .text-gray-900,
 body.dark-theme #settings-tab .text-gray-800,
-body.dark-theme #settings-tab .text-gray-700 {
-    color: #1e293b !important;
+body.dark-theme #settings-tab .text-gray-700,
+body.dark-theme #settings-tab .text-gray-900 {
+    color: #f1f5f9 !important;
 }
 
-body.dark-theme #dashboard-tab canvas,
-body.dark-theme #settings-tab canvas {
-    filter: invert(0) !important; /* إعادة الألوان الطبيعية */
+/* 4. إصلاح النصوص الرمادية المتوسطة */
+body.dark-theme #dashboard-tab .text-gray-600,
+body.dark-theme #dashboard-tab .text-gray-500,
+body.dark-theme #settings-tab .text-gray-600,
+body.dark-theme #settings-tab .text-gray-500 {
+    color: #94a3b8 !important;
+}
+
+/* 5. إصلاح الحدود */
+body.dark-theme #dashboard-tab .border-gray-200,
+body.dark-theme #dashboard-tab .border-gray-100,
+body.dark-theme #settings-tab .border-gray-200,
+body.dark-theme #settings-tab .border-gray-100 {
+    border-color: #334155 !important;
+}
+
+/* 6. إصلاح أزرار الإجراءات في Dashboard */
+body.dark-theme #dashboard-tab button.bg-white\/50 {
+    background-color: #1e293b !important;
+    border-color: #475569 !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-theme #dashboard-tab button.bg-white\/50:hover {
+    background-color: #334155 !important;
+}
+
+/* 7. إصلاح مخططات Chart.js */
+body.dark-theme canvas#trendChart,
+body.dark-theme canvas#typePieChart {
+    filter: brightness(0.8) contrast(1.2);
 }
 </style>
 </head>
